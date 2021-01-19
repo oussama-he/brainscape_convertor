@@ -1,7 +1,7 @@
 #################################################################
 #  Created by Oussama  19th Jan 2021
 #
-# modify by JLK
+#   modified by JLK
 #
 # This script convert a text.csv file to html.csv file for the website https://www.brainscape.com/
 # source file in :  ./input-files/
