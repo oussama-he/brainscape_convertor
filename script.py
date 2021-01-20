@@ -16,7 +16,7 @@ import re
 from os import listdir
 from os.path import isfile, join
 
-suffixes = "(adj\.|adv\.|pron\.|num\.|num\.-m|conj\.|part\.|aux\.|prep\.|n\.|v\.|m\.)"
+suffixes = "(adj\.|adv\.|pron\.|num\.|num\.-m|conj\.|part\.|aux\.|prep\.|n\.|v\.|m\.|...\.)"
 base_str1 = """<p style="text-align: center;"><span class="large">%s</span></p>"""
 base_str2 = """<p style="text-align: center;"><span class="large">%s </span></p><p style="text-align: center;"><span class="large">%s</span></p>"""
 
