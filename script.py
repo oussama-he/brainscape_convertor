@@ -51,7 +51,7 @@ for file in files:
             result.append((base_str1 % row[0], base_str2 % (spell_def[0], spell_def[1])))
 
     # JLK added:  , encoding='utf-8'
-    with open(f'result/html-{file[1]}', 'w', encoding='utf-8') as output:
+    with open(f'result/html-{file[1]}', 'w', encoding='utf-8', newline='') as output:
         writer = csv.writer(output,)
         writer.writerow(['Question', 'Answer'])
         for row in result:
