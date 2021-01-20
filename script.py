@@ -45,7 +45,6 @@ for file in files:
             ch_letters = re.findall(r'[\u4e00-\u9fff]+', row[1])
             if ch_letters:
                 print(f'This line [{i}] in the file [{file[1]}] does not match the format')
-                continue
                 exit()
             spell_def = extract_suffix(row[1])
             result.append((base_str1 % row[0], base_str2 % (spell_def[0], spell_def[1])))
