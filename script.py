@@ -16,7 +16,7 @@ import re
 from os import listdir
 from os.path import isfile, join
 
-suffixes = "(adj\.|adv\.|pron\.|num\.|num\.-m|conj\.|part\.|aux\.|prep\.|n\.|v\.|m\.|...\.)"
+suffixes = "(adj\.|adv\.|pron\.|num\.|num\.-m|conj\.|part\.|aux\.|prep\.|n\.|v\.|m\.|phrw\.)"
 base_str1 = """<p style="text-align: center;"><span class="large">%s</span></p>"""
 base_str2 = """<p style="text-align: center;"><span class="large">%s </span></p><p style="text-align: center;"><span class="large">%s</span></p>"""
 
@@ -47,6 +47,8 @@ for file in files:
                 print(f'This line [{i}] in the file [{file[1]}] does not match the format')
                 exit()
             spell_def = extract_suffix(row[1])
+            # JLK: Print for debugging line by line
+            #print("spell_def:", spell_def)
             result.append((base_str1 % row[0], base_str2 % (spell_def[0], spell_def[1])))
 
     # JLK added:  , encoding='utf-8'
