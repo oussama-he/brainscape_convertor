@@ -22,7 +22,7 @@ base_str2 = """<p style="text-align: center;"><span class="large">%s </span></p>
 
 
 def extract_suffix(word):
-    regex = f'^(\w+?\t?)((?:{suffixes}) .*)$'
+    regex = f'^(\w+?\s?\w+?\t?)((?:{suffixes}) .*)$'
     return re.sub(regex, "\\1#\\2", word, re.UNICODE).split("#")
 
 
