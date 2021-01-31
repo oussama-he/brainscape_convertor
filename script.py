@@ -71,7 +71,10 @@ def make_html_strings(reader, file_path):
             exit()
         # convert the "Answer row" into "pinyin", "word functions" and "translation"
         spell_def = extract_suffix(row[1])
-
+        # check that the "Answer row" contains "pinyin", "word functions" and "translation"
+        if len(spell_def) != 2:
+            print(f'This line [{i}] in the file [{file_path[1]}] does not match the format')
+            exit()
         # Create the new string and append to the result list
         result.append((base_str1 % row[0], base_str3 % (spell_def[0], row[0], spell_def[1])))
     return result
